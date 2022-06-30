@@ -1,0 +1,12 @@
+{
+  "name": "macmaster",
+  "version": "0.0.0",
+  "description": "Our first commercial order for website development. Mac-master is an online store for the sale of air conditioners and other equipment, as well as devices for installing air conditioners.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "crazyLoveV",
+  "license": "ISC"
+}
