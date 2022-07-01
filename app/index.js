@@ -1,10 +1,19 @@
 const express = require('express')
 const path = require('path')
 require('dotenv').config({path: path.join(__dirname, '.env')})
-const sequelize  = require('../server/database/index');
+const sequelize  = require('./database/index');
 
 const app = express()
 
+//Шаблонизатор
+app.set('views', './views')
+app.set('view engine', 'pug')
+
+app.get('/', (req, res) => {
+  res.render('main.pug', { title: 'Greetings from Pug' })
+})
+
+//  
 let port = process.env.PORT || 5000
 
 const start = async() =>{
@@ -22,20 +31,6 @@ const start = async() =>{
 }
 start()
 
-/**
- * Структура: 
- * MacMaster
- * -node_modules
- * -server
- * --database
- * ---models
- * ---index.js
- * --.env
- * --index.js
- * -.gitignore
- * -readme
- * -package-lock
- * -pachage
- */
+
 
 

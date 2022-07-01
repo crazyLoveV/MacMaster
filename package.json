@@ -4,7 +4,7 @@
   "description": "Our first commercial order for website development. Mac-master is an online store for the sale of air conditioners and other equipment, as well as devices for installing air conditioners.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon app/index.js"
   },
   "keywords": [],
   "author": "crazyLoveV",
@@ -17,6 +17,7 @@
   "dependencies": {
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
+    "pug": "^3.0.2",
     "sequelize": "^6.21.2"
   }
 }
