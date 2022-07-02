@@ -1,9 +1,21 @@
 const express = require('express')
 const path = require('path')
 require('dotenv').config({path: path.join(__dirname, '.env')})
+var bodyParser = require('body-parser')
+
+
 const sequelize  = require('./database/index');
+const router = require('./router/router')
+
+// Parser
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 const app = express()
+
+//Router
+app.use('/authorization', router)
+
 
 //Шаблонизатор
 app.set('views', './views')
