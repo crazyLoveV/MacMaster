@@ -7,8 +7,12 @@ class auth_controller {
         try {
             
         } catch (error) {
-            console.log(error);  
-            return null
+            return res.json({
+                result: '0',
+                success: false,
+                massage: 'You have an error in code!',
+                error: error
+            })
         }
         
     }
@@ -18,8 +22,12 @@ class auth_controller {
         try {
             
         } catch (error) {
-            console.log(error);  
-            return null
+            return res.json({
+                result: '0',
+                success: false,
+                massage: 'You have an error in code!',
+                error: error
+            })
         }
         
     }
@@ -27,10 +35,19 @@ class auth_controller {
     async getUsers(req, res) {
 
         try {
+            res.json({
+                result: '1',
+                success: true,
+                massage: 'Server is working!'
+            })
             
         } catch (error) {
-            console.log(error);  
-            return null
+            return res.json({
+                result: '0',
+                success: false,
+                massage: 'You have an error in code!',
+                error: error
+            })
         }
         
     }

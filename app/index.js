@@ -5,13 +5,15 @@ var bodyParser = require('body-parser')
 
 
 const sequelize  = require('./database/index');
-const router = require('./router/router')
+const router = require('./router/auth_router')
 
-// Parser
+
+const app = express()
+
+// Parser: urlencoded json
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const app = express()
 
 //Router
 app.use('/authorization', router)
